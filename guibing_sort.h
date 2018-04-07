@@ -3,6 +3,7 @@
 #include<cstring>
 #include<cstdlib>
 using namespace std;
+//这个版本有问题，最后实现的数组排序不对。
 void Merge(int* data, int a,int b, int length,int n	)
 {
 	int right;
@@ -22,7 +23,7 @@ void Merge(int* data, int a,int b, int length,int n	)
 			j++;
 		}
 	}
-	if(j==right){ //a�л���Ԫ�أ���ȫ����b�еĴ�a[i]��δʹ��
+	if(j==right){ //a中还有元素，且全都比b中的大，a[i]还未使用
 		memcpy(temp+i+j,data+a+i,(length-i)*sizeof(int));
 	
 	}else if(i==length){
